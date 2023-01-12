@@ -6,32 +6,32 @@ databaseChangeLog:
       changes: 
         - sqlFile:
             path: db/migration/table_func_keys.sql
-  - changeSet:
-      id: 2
-      author: rafa
-      comment: criação da tabela functionalitie
-      changes:
-        - sqlFile:
-            path: db/migration/table_func.sql
-  - changeSet:
-      id: 3
-      author: rafa
-      comment: criação da tabela roles
-      changes:
-        - sqlFile:
-            path: db/migration/table_roles.sql
-  - changeSet:
-      id: 4
-      author: rafa
-      comment: criação da tabela user
-      changes:
-        - sqlFile:
-            path: db/migration/table_user.sql
-  - changeSet:
-      id: 5
-      author: rafa
-      comment: criação da tabela user_roles
-      changes:
-        - sqlFile:
-            path: db/migration/table_role_user.sql
+  # - changeSet:
+  #     id: 2
+  #     author: rafa
+  #     comment: criação da tabela functionalitie
+  #     changes:
+  #       - sqlFile:
+  #           path: db/migration/table_func.sql
+  # - changeSet:
+  #     id: 3
+  #     author: rafa
+  #     comment: criação da tabela roles
+  #     changes:
+  #       - sqlFile:
+  #           path: db/migration/table_roles.sql
+  # - changeSet:
+  #     id: 4
+  #     author: rafa
+  #     comment: criação da tabela user
+  #     changes:
+  #       - sqlFile:
+  #           path: db/migration/table_user.sql
+  # - changeSet:
+  #     id: 5
+  #     author: rafa
+  #     comment: criação da tabela user_roles
+  #     changes:
+  #       - sqlFile:
+  #           path: db/migration/table_role_user.sql
 

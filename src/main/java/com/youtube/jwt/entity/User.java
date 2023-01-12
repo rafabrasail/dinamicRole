@@ -10,10 +10,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
-@Entity(name="EMS_USER")
-@Table(name="EMS_USER", schema = "JWT_YOUTUBE")
+@Entity(name="USER")
+@Table(name="USER", schema = "JWT_YOUTUBE")
 @Builder
 @Embeddable
 @Data
@@ -21,26 +21,26 @@ import java.util.List;
 @NoArgsConstructor
 public class User implements Serializable {
 
-    @Id
-    @Column(name="ID_USER")
-    @JsonProperty("userId")
-    private Long userId;
+@Id
+@Column(name="ID_USER")
+@JsonProperty("userId")
+private int userId;
 
-    @Column(name="NAME")
-    @JsonProperty("userName")
-    private String userName;
+@Column(name="NAME")
+@JsonProperty("userName")
+private String userName;
 
-    @Column(name = "LOGIN")
-    @JsonProperty("userLogin")
-    private String userLogin;
+@Column(name = "LOGIN")
+@JsonProperty("userLogin")
+private String userLogin;
 
-    @Column(name = "PASSWORD")
-    @JsonProperty("userPassword")
-    private String userPassword;
+@Column(name = "PASSWORD")
+@JsonProperty("userPassword")
+private String userPassword;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "USER_ROLE", schema="jwt_youtube", joinColumns = {@JoinColumn(name = "USER_ID")}, inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")})
-    @JsonProperty("role")
-    private List<Role> role;
+@ManyToMany(fetch = FetchType.EAGER)
+@JoinTable(name = "USER_ROLE", schema="jwt_youtube", joinColumns = {@JoinColumn(name = "ID_USER")}, inverseJoinColumns = {@JoinColumn(name ="ID_ROLE")})
+@JsonProperty("role")
+private Set<Role> role;
 
 }
