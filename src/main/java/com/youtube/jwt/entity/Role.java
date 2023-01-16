@@ -23,12 +23,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Role {
 
-@Id
-@GeneratedValue
-@Column(name="ID_ROLE")
-@JsonProperty("roleId")
-private int roleId;
+// @Id
+// @GeneratedValue
+// @Column(name="ID_ROLE")
+// @JsonProperty("roleId")
+// private int roleId;
 
+@Id
 @Column(name="ROLE_NAME")
 @JsonProperty("roleName")
 private String roleName;
@@ -39,6 +40,6 @@ private String roleDescription;
 
 // @Column(name = "FUNCTIONALIES")
 // @JsonProperty("functionalities")
-// private String functionalities;
+// private Functionalities functionalities;
 
 }

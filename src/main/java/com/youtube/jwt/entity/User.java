@@ -21,11 +21,12 @@ import java.util.Set;
 @NoArgsConstructor
 public class User implements Serializable {
 
-@Id
-@Column(name="ID_USER")
-@JsonProperty("userId")
-private int userId;
+// @Id
+// @Column(name="ID_USER")
+// @JsonProperty("userId")
+// private int userId;
 
+@Id
 @Column(name="NAME")
 @JsonProperty("userName")
 private String userName;
